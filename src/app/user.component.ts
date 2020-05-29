@@ -1,14 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component ({
   selector : 'user-root',
   template: `
   <p> hello musembi</p>
   <p> {{username}}</p>
-  `
+  <p> {{age}}</p>
+  `,
 })
 
 export class UserComponent {
-  username= " Peter Musembi"
+  @Input() username= " Peter Musembi";
+  @Input() age = 10;
+
+
 }
 
